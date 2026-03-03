@@ -1,0 +1,4 @@
+Done		EQU 0800BH
+Message		EQU 0800CH
+PrintLoop	EQU 08003H
+Start		EQU 08000H

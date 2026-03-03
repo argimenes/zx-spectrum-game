@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build (pasmo)",
+      "type": "shell",
+      "command": "make build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run (ZEsarUX)",
+      "type": "shell",
+      "command": "make run",
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Debug (ZEsarUX debugger)",
+      "type": "shell",
+      "command": "make debug",
+      "group": "test",
+      "problemMatcher": []
+    }
+  ]
+}
