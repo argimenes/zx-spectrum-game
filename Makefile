@@ -7,7 +7,7 @@ MACHINE := 48k
 ROMFILE := /usr/local/share/zesarux/roms/48.rom
 
 # --- project ---
-NAME := HelloWorld321
+NAME := Main
 SRC  := src/main.asm
 OUTDIR := dist
 TAP  := $(OUTDIR)/main.tap

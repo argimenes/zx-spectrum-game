@@ -22,3 +22,5 @@ Message:
         DEFM    "HELLO King Cat!"
         DEFB    13              ; newline (ENTER)
         DEFB    0               ; string terminator (our loop stops on 0)
+
+END     32768
