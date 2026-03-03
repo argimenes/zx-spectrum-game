@@ -7,11 +7,11 @@ MACHINE := 48k
 ROMFILE := /usr/local/share/zesarux/roms/48.rom
 
 # --- project ---
-NAME := HelloWorld
-SRC  := src/helloworld.asm
+NAME := HelloWorld321
+SRC  := src/main.asm
 OUTDIR := dist
-TAP  := $(OUTDIR)/helloworld.tap
-LOG  := $(OUTDIR)/helloworld.log
+TAP  := $(OUTDIR)/main.tap
+LOG  := $(OUTDIR)/main.log
 
 .PHONY: all build run debug clean
 
