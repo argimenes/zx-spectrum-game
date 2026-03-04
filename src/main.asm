@@ -9,16 +9,8 @@
 
         ORG     $8000           ; common start address for machine-code programs
 
-        ld      hl, $4000
-        ld      b, $c0
-
-loop:
-        ld      (hl), $3c
-        call    NextScan
-        ; halt
-        djnz    loop
-
-        ret
+call    Main
+ret
         
-        INCLUDE "video.asm"
+        INCLUDE "helloworld.asm"
         END     $8000
