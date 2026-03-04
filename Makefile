@@ -7,11 +7,12 @@ MACHINE := 48k
 ROMFILE := /usr/local/share/zesarux/roms/48.rom
 
 # --- project ---
-NAME := Main
-SRC  := src/main.asm
+NAME := ZX-Pong
+SRCDIR := src
+SRC  := $(SRCDIR)/main.asm
 OUTDIR := dist
-TAP  := $(OUTDIR)/main.tap
-LOG  := $(OUTDIR)/main.log
+TAP  := $(OUTDIR)/pong.tap
+LOG  := $(OUTDIR)/pong.log
 
 .PHONY: all build run debug clean
 
@@ -22,7 +23,7 @@ $(OUTDIR):
 
 # Build TAP + capture assembler log into dist/helloworld.log
 build: | $(OUTDIR)
-	$(PASMO) --name $(NAME) --tapbas $(SRC) $(TAP) --log > $(LOG) 2>&1
+	$(PASMO) -I $(SRCDIR) --name $(NAME) --tapbas $(SRC) $(TAP) --log > $(LOG) 2>&1
 	@echo "Built: $(TAP)"
 	@echo "Log:   $(LOG)"
 
