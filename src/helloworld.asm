@@ -20,6 +20,9 @@ Main:
     ld hl, ATTR_S               ; HL = address permanent attributes
     ld (hl), a                  ; Load into memory
 
+    ld  a, $01                  ; Load the border colour (blue) into A
+    out ($fe), a                ; Set border colour
+    
     call CLS                    ; Clear screen: use ATTR_S
 
     ld b, $18-$0a               ; B = Y coordinate

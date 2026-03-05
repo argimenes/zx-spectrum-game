@@ -1,2 +1,5 @@
 dist/
 *.log
+*.zsf
+*.idx
+*/--log

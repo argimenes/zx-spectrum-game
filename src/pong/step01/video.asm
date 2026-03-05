@@ -24,3 +24,25 @@ NextScan:
     ld      h, a                  ; Load the value in H
 
     ret
+
+; ============================
+; PreviousScan
+; ============================
+
+PreviousScan:
+    LD  a, h
+    DEC h
+    AND $07
+    RET NZ
+
+    LD  a, L
+    SUB $20
+    LD  L, a
+    RET c
+
+    LD  a, H
+    ADD a, $08
+    LD  H, a
+
+    RET
+    

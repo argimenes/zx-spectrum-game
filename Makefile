@@ -46,7 +46,7 @@ ROMFLAG := $(if $(ROMFILE_EXISTS),--romfile $(ROMFILE),)
 
 # --- project ---
 NAME   ?= ZX-Pong
-SRCDIR ?= src
+SRCDIR ?= src/pong/step01
 SRC    ?= $(SRCDIR)/main.asm
 OUTDIR ?= dist
 TAP    ?= $(OUTDIR)/pong.tap
@@ -61,6 +61,7 @@ $(OUTDIR):
 
 # Build TAP + capture assembler log into dist/pong.log
 build: | $(OUTDIR)
+	cd $(SRCDIR)
 	$(PASMO) -I $(SRCDIR) --name $(NAME) --tapbas $(SRC) $(TAP) --log > $(LOG) 2>&1
 	@echo "Built: $(TAP)"
 	@echo "Log:   $(LOG)"
